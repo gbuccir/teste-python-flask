@@ -1,0 +1,59 @@
+{% extends './main/base.html' %}
+
+{% block content %}
+
+<h2>Virtual machine search</h2>
+<br /><br />
+
+<!-- SEARCH FORM -->
+<section class="container">
+    <form action="http://localhost:5000/search" method="POST">
+        <div class="form-group">
+            <label for="ram">RAM</label>
+            <input type="text" class="form-control" id="ram" name="ram" aria-describedby="ramH">
+        </div>
+
+        <br />
+        <div class="form-group">
+            <label for="cores">vCPU cores</label>
+            <input type="number" class="form-control" id="cores" name="cores" aria-describedby="cores">
+        </div>
+
+        <br />
+        <div class="form-group">
+            <label for="os">OS</label>
+            <input type="text" class="form-control" id="osId" name="os" aria-describedby="os">
+        </div>
+
+        <br />
+        <div class="align-end">
+            <button type="submit" class="btn submit-form">Search</button>
+        </div>
+
+        <br />
+    </form>
+</section>
+
+<!-- SEARCH RESULT -->
+{% if vmList is defined and vmList != None %}
+<table class="table table-striped abinbev-table ">
+    <tr>
+        <th>Arm Sku Name</th>
+        <th>RAM</th>
+        <th>CPU cores</th>
+        <th>OS</th>
+        <th>Unit Price Per Unit</th>
+    </tr>
+    <tr>
+        <td>{{vmList['armSkuName']}}</td>
+        <td>{{vmList['memoryInMB']}}</td>
+        <td>{{vmList['numberOfCores']}}</td>
+        <td>{{vmList['os']}}</td>
+        <td>{{vmList['unitPricePerUnit']}}</td>
+    </tr>
+    </tr>
+</table>
+</div>
+{% endif %}
+
+{% endblock %}

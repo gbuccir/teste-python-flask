@@ -1,0 +1,12 @@
+PART TWO – DISCURSIVE
+1. In reviewing the provided CSV file, can you identify and suggest any modifications
+that might enhance the web page's performance or optimize memory usage?
+What about for large number of rows? Please provide a thorough justification for
+each recommendation
+
+
+R:
+To improve performance the files could have an ID column for each vm which would make the search
+easier specially within a database.
+Fewer columns could improve performance as well since there is less trafic of data.
+Large number of rows can take time to load so pagination when displaying the data could optimize memory usage 

@@ -1,0 +1,35 @@
+:root {
+    --p-black: #000000;
+    --p-white: #ffffff;
+    --p-gold:  linear-gradient(to bottom left, #f5e003, #d3a238);
+
+    --s-gold: #e5b611;
+    --s-lgold: #f5e003;
+    --s-dgold:  #d1a33c;
+    --s-lgray: #efefef;
+    --s-dgray: #c7c7c7;
+    --s-red: #921a28;
+    --s-baige: #d69e77;
+    --s-lred: #e88475;
+    --s-blue: #325a6d;
+    --s-green: #959b7b;
+    --s-brown: #3f1f14;
+  }
+
+  .align-end{
+    text-align: right;
+  }
+
+
+  .submit-form{
+    background-color: var(--s-gold);
+  }
+
+  .submit-form:hover{
+    background-color: var(--s-dgold);
+  }
+  
+
+  .abinbev-table tr:hover:not(:first-of-type){
+      background-color: var(--s-gold);
+  }
